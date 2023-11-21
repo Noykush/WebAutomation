@@ -66,9 +66,10 @@ import java.util.Properties;
             if (browserName.equals("chrome")) {
                 System.setProperty("webdriver.chrome.driver", prop.getProperty("chromedriver_path"));
                 ChromeOptions options = new ChromeOptions();
+                options.setBinary("C:\\chromes\\117\\chrome-win64\\chrome.exe");
                 options.addArguments("start-maximized");
                 options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-                //options.setCapability("browserVersion", "117.0.5938.132");
+               // options.setCapability("browserVersion", "118.0.5993.118");
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
             } else if (browserName.equals("firefox")) {
@@ -82,6 +83,7 @@ import java.util.Properties;
         }
         catch (Exception e) {
             LoggerFactory.getLogger("DriverManager").debug("failed to create a webdriver");
+            LoggerFactory.getLogger("DriverManager").debug(e.getMessage());
         }
     }
 

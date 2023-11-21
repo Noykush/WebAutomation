@@ -1,8 +1,11 @@
 package com.automation;
 
  public final class SetUpConfig {
-     public static final String CHROME_DRIVER_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chromedriver.exe";
+
+     //public static final String CHROME_DRIVER_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chromedriver.exe";
+     public static final String CHROME_DRIVER_PATH = "C:\\chromes\\117\\chromedriver.exe";
+
      public static final String BROWSER  = "chrome";
-     public static final Long WAIT_SEC  = 30L;
+     public static final Long WAIT_SEC  = 40L;
 
  }
